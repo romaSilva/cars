@@ -14,7 +14,7 @@ module.exports = {
         year,
       });
 
-      return res.json(car);
+      return res.status(201).json(car);
     } catch (error) {
       console.error(error);
 
@@ -66,11 +66,32 @@ module.exports = {
         },
       });
 
-      return res.send("Car deleted");
+      return res.status(200).send("Car deleted");
     } catch (error) {
       console.error(error);
 
       return res.status(500).send("Server Error");
     }
+  },
+
+  async one(req, res) {
+    const { id } = req.params;
+
+    const car = await Car.findOne({
+      attributes: [
+        "id",
+        "plate",
+        "chassis",
+        "renavam",
+        "model",
+        "brand",
+        "year",
+      ],
+      where: {
+        id,
+      },
+    });
+
+    return res.status(200).json(car);
   },
 };
