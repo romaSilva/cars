@@ -1,0 +1,59 @@
+header {
+  height: 50px;
+  margin-bottom: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+fieldset {
+  height: 30px;
+  margin-bottom: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  border: none;
+}
+
+fieldset .field {
+  display: flex;
+  flex-direction: column;
+}
+
+fieldset .field label {
+  font-size: 14px;
+}
+
+fieldset .field input {
+  margin-right: 60px;
+  height: 30px;
+  width: 200px;
+  padding: 10px;
+
+  border: 1px solid #d1d1d1;
+  border-radius: 8px;
+}
+
+fieldset button {
+  margin-right: 50px;
+  height: 30px;
+  width: 200px;
+
+  border-radius: 8px;
+  background-color: white;
+  outline: none;
+  border: 1px solid #d1d1d1;
+  color: rgba(0, 33, 113, 1);
+}
+
+fieldset button:hover {
+  cursor: pointer;
+  border-color: rgba(0, 33, 113, 1);
+}
+
+.button-field {
+  justify-content: flex-end;
+}
