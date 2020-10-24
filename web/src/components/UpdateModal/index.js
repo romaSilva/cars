@@ -51,6 +51,12 @@ const UpdateModal = ({
         <form
           onSubmit={(e) => {
             e.preventDefault();
+            setPlate("");
+            setChassis("");
+            setRenavam("");
+            setModel("");
+            setBrand("");
+            setYear("");
             const myCar = {
               id: selectedCar.id,
               plate: plate || selectedCar.plate,

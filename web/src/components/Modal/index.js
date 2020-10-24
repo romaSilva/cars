@@ -45,6 +45,12 @@ const AddModal = ({ isModalOpen, setIsModalOpen, handleFormSubmit }) => {
       <form
         onSubmit={(e) => {
           e.preventDefault();
+          setPlate("");
+          setChassis("");
+          setRenavam("");
+          setModel("");
+          setBrand("");
+          setYear("");
           handleFormSubmit({ plate, chassis, renavam, model, brand, year });
         }}
       >
